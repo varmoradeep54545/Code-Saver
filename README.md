@@ -27,7 +27,7 @@ Code Saver is a web application built using React.js, allowing users to save, or
 
 - **Snippet Management:** Save your code snippets and easily update or delete them as needed.
 - **Search Functionality:** Quickly find saved snippets using the built-in search bar.
-- **Editable Snippets: ** Edit your saved snippets to ensure you have the most up-to-date versions.
+- **Editable Snippets:** Edit your saved snippets to ensure you have the most up-to-date versions.
 
 ### Additional Features
 

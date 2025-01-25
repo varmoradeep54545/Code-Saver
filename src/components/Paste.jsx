@@ -9,7 +9,7 @@ import {
   FaTelegram,
   FaSquareWhatsapp,
 } from "react-icons/fa6";
-import { FaEdit, FaCopy, FaEye } from "react-icons/fa";
+import { FaEdit, FaCopy } from "react-icons/fa";
 import { MdDelete, MdOutlineIosShare } from "react-icons/md";
 import { FaRegCalendarAlt } from "react-icons/fa";
 
@@ -49,19 +49,17 @@ const Paste = () => {
         onChange={(e) => setSearchTerm(e.target.value)}
       />
 
-      <div className=" rounded-2xl flex flex-col gap-5 mt-5 justify-evenly w-[900px] border p-3 bg-[#121212]">
-      <h1>All Pastes</h1><hr/>
+      <div className="rounded-2xl flex flex-col gap-5 mt-5 justify-evenly w-[900px] border p-3 bg-[#121212]">
+        <h1>All Pastes</h1>
+        <hr />
         {filteredData.length > 0 &&
           filteredData.map((paste) => {
             return (
-
-              
               <div
-                className="border h-[200px] rounded-2xl "
+                className="border h-[200px] rounded-2xl"
                 key={paste._id}
                 style={{ padding: "20px", position: "relative" }}
               >
-
                 <div
                   style={{
                     fontSize: "24px",
@@ -72,19 +70,21 @@ const Paste = () => {
                   {paste.title}
                 </div>
 
-                <div className=" flex flex-row justify-end gap-3 text-[15px] mt-5 text-right">
-                  <div>  <FaRegCalendarAlt className="text-[20px]" />  </div>
+                <div className="flex flex-row justify-end gap-3 text-[15px] mt-5 text-right">
                   <div>
-                    {new Date(paste.createAt).toLocaleDateString('en-US', {
-                      month: 'long',
-                      day: 'numeric',
-                      year: 'numeric'
+                    <FaRegCalendarAlt className="text-[20px]" />
+                  </div>
+                  <div>
+                    {new Date(paste.createAt).toLocaleDateString("en-US", {
+                      month: "long",
+                      day: "numeric",
+                      year: "numeric",
                     })}
                   </div>
                 </div>
 
                 <div
-                  className="line-clamp-3 overflow-hidden text-ellipsis "
+                  className="line-clamp-3 overflow-hidden text-ellipsis"
                   style={{
                     fontSize: "18px",
                     textAlign: "left",
@@ -103,11 +103,6 @@ const Paste = () => {
                       <FaEdit />
                     </a>
                   </button>
-                  <button title="View">
-                    <a href={`/paste/${paste?._id}`}>
-                      <FaEye />
-                    </a>
-                  </button>
                   <button
                     onClick={() => handleDelete(paste?._id)}
                     title="Delete"
@@ -117,7 +112,9 @@ const Paste = () => {
                   <button
                     onClick={() => {
                       navigator.clipboard.writeText(paste?.content);
-                      toast.success("Copied to Clipboard", { position: 'top-right' });
+                      toast.success("Copied to Clipboard", {
+                        position: "top-right",
+                      });
                     }}
                     title="Copy"
                   >
@@ -127,7 +124,6 @@ const Paste = () => {
                     <MdOutlineIosShare />
                   </button>
                 </div>
-
 
                 <Modal
                   ariaHideApp={false}
@@ -152,7 +148,6 @@ const Paste = () => {
                     },
                   }}
                 >
-
                   <button
                     onClick={closeModal}
                     style={{
@@ -170,7 +165,6 @@ const Paste = () => {
                   </button>
 
                   <h2>Share this URL</h2>
-
 
                   <div
                     style={{
@@ -194,7 +188,9 @@ const Paste = () => {
                     <button
                       onClick={() => {
                         navigator.clipboard.writeText(currentUrl);
-                        toast.success("URL Copied!", { position: 'top-right' });
+                        toast.success("URL Copied!",{
+                        position: "top-right",
+                        });
                       }}
                       style={{
                         padding: "5px 10px",
@@ -206,7 +202,6 @@ const Paste = () => {
                       Copy
                     </button>
                   </div>
-
 
                   <div
                     style={{

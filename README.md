@@ -45,7 +45,7 @@ Code Saver is a web application built using React.js, allowing users to save, or
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Smit-Kadivar/Code-Saver.git
+   git clone https://github.com/yourgithuburl/Code-Saver.git
    ```
 
 2. Navigate to the project directory:

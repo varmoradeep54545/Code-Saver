@@ -8,7 +8,7 @@ const Navbar = () => {
                
                 <div className="text-2xl font-bold text-white">
                     <NavLink to="/" className="hover:scale-105 transition-transform ">
-                    𝙲𝚘𝚍𝚎 𝚂𝚊𝚟𝚎𝚛
+                    𝙲𝚘𝚍𝚎 Notes
                     </NavLink>
                 </div>
               

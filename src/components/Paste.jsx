@@ -26,7 +26,7 @@ const Paste = () => {
   );
 
   const openModal = (pasteId) => {
-    const urlLink = `http://localhost:5173/paste/${pasteId}`;
+    const urlLink = `https://code-saver-three.vercel.app/paste/${pasteId}`;
     setCurrentUrl(urlLink);
     setModalIsOpen(true);
   };
